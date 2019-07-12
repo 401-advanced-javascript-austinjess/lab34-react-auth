@@ -1,11 +1,9 @@
 import React from 'react';
 import cookie from 'react-cookies';
 import jwt from 'jsonwebtoken';
-import AuthContext from './context';
+import AuthContext from '../context';
 
-export const LoginContext = React.createContext();
-
-export default class LoginProvider extends React.Component {
+export default class AuthProvider extends React.Component {
   constructor(props) {
     super(props);
 

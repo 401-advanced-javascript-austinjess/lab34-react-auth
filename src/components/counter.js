@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import TodoContext from './context';
 
 // READS AND DISPLAYS THE COUNT FROM CONTEXT
 
 const Count = (props) => {
-  return <h2>There are {props.count} items in the list</h2>;
+  let context = useContext(TodoContext);
+  return <h2>There are {context.todoList.length} items in the list</h2>;
 };
 
 export default Count;
