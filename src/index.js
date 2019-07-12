@@ -1,11 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import AuthProvider from './components/providers/authProvider';
 import App from './app.js';
 
 class Main extends React.Component {
   render() {
-    return <App />;
+    return (
+      <AuthProvider>
+        <App />
+      </AuthProvider>
+    );
   }
 }
 
