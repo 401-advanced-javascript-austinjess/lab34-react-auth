@@ -1,9 +1,11 @@
-import React from 'react';
-import useAuth from './hooks/useAuth';
+import React, { useContext } from 'react';
+// import useAuth from './hooks/useAuth';
+import AuthContext from './auth/authProvider';
 
 class Auth extends React.Component {
   render() {
-    let authContext = useAuth();
+    let authContext = useContext(AuthContext);
+    console.log(authContext);
 
     const { children, capability } = this.props;
 

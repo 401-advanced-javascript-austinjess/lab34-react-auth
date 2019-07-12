@@ -1,14 +1,20 @@
 import React from 'react';
 
-import TodoProvider from './components/providers/todoProvider';
-import ToDo from './components/todo/todo.js';
+import TodoProvider from './components/todo/todoProvider';
+import ToDo from './components/todo/todo';
+import Login from './components/login';
 
 export default class App extends React.Component {
   render() {
     return (
-      <TodoProvider>
-        <ToDo />
-      </TodoProvider>
+      <>
+        <header>
+          <Login />
+        </header>
+        <TodoProvider>
+          <ToDo />
+        </TodoProvider>
+      </>
     );
   }
 }

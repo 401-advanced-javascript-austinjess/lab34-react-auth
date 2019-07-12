@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import TodoContext from './context';
+import TodoContext from './todo/context';
 
 // READS AND DISPLAYS THE COUNT FROM CONTEXT
 

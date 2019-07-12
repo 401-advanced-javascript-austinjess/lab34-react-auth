@@ -1,7 +1,7 @@
 import React from 'react';
 import cookie from 'react-cookies';
 import jwt from 'jsonwebtoken';
-import AuthContext from '../context';
+import AuthContext from './context';
 
 export default class AuthProvider extends React.Component {
   constructor(props) {
