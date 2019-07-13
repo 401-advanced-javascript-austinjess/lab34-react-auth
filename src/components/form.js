@@ -1,9 +1,8 @@
 import React, { useContext } from 'react';
-import TodoContext from './context';
+import TodoContext from './todo/context';
 
 const Form = (props) => {
   let context = useContext(TodoContext);
-  console.log(context);
   return (
     <div>
       <form onSubmit={context.addItem}>

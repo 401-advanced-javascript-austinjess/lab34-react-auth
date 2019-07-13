@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import AuthProvider from './components/providers/authProvider';
+import AuthProvider from './components/auth/authProvider';
 import App from './app.js';
 
 class Main extends React.Component {

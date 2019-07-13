@@ -1,6 +1,6 @@
 import React from 'react';
 import uuid from 'uuid';
-import TodoContext from '../context';
+import TodoContext from './context';
 
 export default class TodoProvider extends React.Component {
   constructor(props) {
@@ -21,7 +21,7 @@ export default class TodoProvider extends React.Component {
   handleInputChange = (e) => {
     let item = {
       text: e.target.value,
-      complete: !!e.target.complete,
+      complete: `${!!e.target.complete}`,
       id: e.target.id || uuid()
     };
     this.setState({ item });
