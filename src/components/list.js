@@ -1,10 +1,10 @@
 import React, { useContext } from 'react';
 import { When } from './if';
 import TodoContext from './todo/context';
+import Auth from './auth';
 
 const List = (props) => {
   const context = useContext(TodoContext);
-
   return (
     <div>
       <ul>
@@ -19,14 +19,16 @@ const List = (props) => {
               </span>
               <button onClick={() => context.toggleEdit(item.id)}>edit</button>
               <When condition={context.editing === item.id}>
-                <form onSubmit={context.updateItem}>
-                  <input
-                    onChange={context.handleInputChange}
-                    id={item.id}
-                    complete={item.complete}
-                    defaultValue={item.text}
-                  />
-                </form>
+                <Auth capability="update">
+                  <form onSubmit={context.updateItem}>
+                    <input
+                      onChange={context.handleInputChange}
+                      id={item.id}
+                      complete={item.complete}
+                      defaultValue={item.text}
+                    />
+                  </form>
+                </Auth>
               </When>
             </li>
           ))}
